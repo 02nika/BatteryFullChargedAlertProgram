@@ -24,9 +24,17 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             MainVoice.Start(96);
+            
+            // ხმოვანი მუსიკა
             SoundPlayer player = new SoundPlayer();
             player.SoundLocation = @"D:\nika\my own stuff\musics\alert\Sound.Wav";
             player.Play();
+
+
+            //exit, minimize and maximize button turned off
+            MaximizeBox = false;
+            MinimizeBox = false;
+            ControlBox = false;
 
             //ეკრანზე დაინახავს მომხმარებელი - არ იქნება ჩაკეცილ მდგომარეობაში
             this.WindowState = FormWindowState.Minimized;
